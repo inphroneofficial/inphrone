@@ -1,0 +1,21 @@
+{
+  "name": "Inphrone",
+  "short_name": "Inphrone",
+  "description": "AI predicts yesterday. Inphrone builds tomorrow. People-powered insights for creators and studios.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "/inphrone-logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/inphrone-logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

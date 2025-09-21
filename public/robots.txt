@@ -1,0 +1,22 @@
+# Allow Google Search
+User-agent: Googlebot
+Allow: /
+
+# Allow Bing Search
+User-agent: Bingbot
+Allow: /
+
+# Allow Twitter/X previews
+User-agent: Twitterbot
+Allow: /
+
+# Allow Facebook previews
+User-agent: facebookexternalhit
+Allow: /
+
+# Default rule for all other crawlers
+User-agent: *
+Allow: /
+
+# Sitemap (important for SEO)
+Sitemap: https://www.inphrone.com/sitemap.xml
