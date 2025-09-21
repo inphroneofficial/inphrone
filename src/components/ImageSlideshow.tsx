@@ -8,7 +8,7 @@ const ImageSlideshow = () => {
 
   const slides = [
   {
-    image: "/inphrone-banner.png",
+    image: "/inphrone banner.png",
     title: "Inphrone Platform Overview",
     description: "The complete ecosystem for creators and audiences",
   },
