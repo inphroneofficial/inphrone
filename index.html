@@ -1,24 +1,26 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <!-- ✅ PWA Manifest -->
+    <!-- Manifest for PWA -->
     <link rel="manifest" href="/manifest.json" />
 
-    <!-- ✅ Essential Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Inphrone | People-Powered Intelligence for Entertainment</title>
 
+    <!-- ✅ SEO Meta -->
     <meta
       name="description"
-      content="AI predicts yesterday. Inphrone builds tomorrow. A people-powered intelligence platform giving creators and studios real-time audience insights before content creation."
+      content="Inphrone | People-Powered Intelligence for Entertainment 🎬✨. Real audience voices → real insights → smarter content creation. AI predicts yesterday, Inphrone builds tomorrow 🚀."
     />
     <meta
       name="keywords"
-      content="Inphrone, entertainment insights, content creation, audience feedback, creators, studios, audience platform, phronesis, AI alternatives"
+      content="Inphrone, entertainment insights, content creation, audience feedback, creators, studios, phronesis, audience platform, AI alternative"
     />
     <meta name="author" content="Inphrone" />
+    <link rel="canonical" href="https://www.inphrone.com" />
+    <meta name="robots" content="index, follow" />
 
     <!-- ✅ Open Graph (Social Media Preview) -->
     <meta property="og:title" content="Inphrone | People-Powered Intelligence for Entertainment" />
@@ -27,7 +29,7 @@
       content="AI predicts yesterday. Inphrone builds tomorrow. Real audience voices, real insights, smarter content creation."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://www.inphrone.com/images/og-image.png" />
+    <meta property="og:image" content="https://www.inphrone.com/inphrone-logo.png" />
     <meta property="og:url" content="https://www.inphrone.com" />
 
     <!-- ✅ Twitter Card -->
@@ -38,24 +40,36 @@
       name="twitter:description"
       content="AI predicts yesterday. Inphrone builds tomorrow. Join the entertainment revolution powered by real audiences."
     />
-    <meta name="twitter:image" content="https://www.inphrone.com/images/og-image.png" />
+    <meta name="twitter:image" content="https://www.inphrone.com/inphrone-logo.png" />
 
-    <!-- ✅ Favicon / Logo (tab icon) -->
-    <link rel="icon" href="/inphrone logo.png" type="image/jpeg" />
-    <link rel="preload" as="image" href="/inphrone logo.png" />
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="/inphrone-logo.png" type="image/png" />
 
-    <!-- ✅ Extra SEO & Mobile Improvements -->
-    <link rel="canonical" href="https://www.inphrone.com" />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#4f46e5" />
+    <!-- ✅ JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Inphrone",
+      "url": "https://www.inphrone.com",
+      "logo": "https://www.inphrone.com/inphrone-logo.png",
+      "sameAs": [
+        "https://www.instagram.com/inphrone",
+        "https://x.com/inphrone",
+        "https://www.youtube.com/@inphrone",
+        "https://www.facebook.com/inphrone",
+        "https://www.reddit.com/user/inphrone",
+        "https://www.linkedin.com/company/inphrone"
+      ],
+      "description": "Inphrone is a people-powered entertainment insights platform. Audiences share opinions 🎤, creators listen 🎨, and better content gets made 🎬."
+    }
+    </script>
   </head>
 
   <body>
-    <noscript>
-      Inphrone requires JavaScript to run. Please enable it in your browser.
-    </noscript>
+    <noscript>Inphrone requires JavaScript to run. Please enable it in your browser.</noscript>
 
-    <!-- React/Vite app will mount here -->
+    <!-- React/Vite App Mount -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

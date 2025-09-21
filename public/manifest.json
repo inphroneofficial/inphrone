@@ -1,21 +1,21 @@
 {
   "name": "Inphrone",
   "short_name": "Inphrone",
-  "description": "AI predicts yesterday. Inphrone builds tomorrow. People-powered insights for creators and studios.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#000000",
   "theme_color": "#4f46e5",
+  "description": "Inphrone | People-Powered Intelligence for Entertainment 🎬✨ Real audience voices → smarter content creation 🚀.",
   "icons": [
     {
-      "src": "/inphrone-logo.jpg",
+      "src": "/inphrone-logo.png",
       "sizes": "192x192",
-      "type": "image/jpeg"
+      "type": "image/png"
     },
     {
-      "src": "/inphrone-logo.jpg",
+      "src": "/inphrone-logo.png",
       "sizes": "512x512",
-      "type": "image/jpeg"
+      "type": "image/png"
     }
   ]
 }
