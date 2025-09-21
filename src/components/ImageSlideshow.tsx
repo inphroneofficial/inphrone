@@ -13,7 +13,7 @@ const ImageSlideshow = () => {
     description: "The complete ecosystem for creators and audiences",
   },
   {
-    image: "/inphrone banner.png",
+    image: "/inphrone banner.jpg",
     title: "Inphrone Platform Overview",
     description: "The complete ecosystem for creators and audiences",
   },
