@@ -7,6 +7,11 @@ const ImageSlideshow = () => {
   const [isPlaying, setIsPlaying] = useState(true);
 
   const slides = [
+    {
+    image: "/inphrone 1.png",
+    title: "Inphrone Platform Overview",
+    description: "The complete ecosystem for creators and audiences",
+  },
   {
     image: "/inphrone banner.png",
     title: "Inphrone Platform Overview",
