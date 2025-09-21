@@ -2,8 +2,20 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue
+} from "@/components/ui/select";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle
+} from "@/components/ui/card";
 import { Mail } from "lucide-react";
 
 export const SubscriptionForm = () => {
@@ -40,8 +52,8 @@ Thank you!`;
   };
 
   return (
-    <Card className="w-full max-w-md mx-auto glass-card transform hover:scale-105 transition-all duration-500 animate-fade-in border-primary/20 shadow-glow">
-      <CardHeader className="text-center pb-4 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-t-lg">
+    <Card className="w-full max-w-md mx-auto glass-card transform transition-all duration-500 hover:shadow-xl border border-primary/10 shadow-glow rounded-xl">
+      <CardHeader className="text-center pb-4 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-t-xl">
         <CardTitle className="text-xl font-bold animate-slide-in-up">
           <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Stay in the Loop
@@ -51,10 +63,12 @@ Thank you!`;
           Get exclusive updates, early access opportunities, and insights into the future of entertainment.
         </CardDescription>
       </CardHeader>
+
       <CardContent className="p-6">
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="name" className="text-sm font-medium">Name</Label>
+        <form onSubmit={handleSubmit} className="space-y-5">
+          {/* Name */}
+          <div className="space-y-1">
+            <Label htmlFor="name">Name</Label>
             <Input
               id="name"
               type="text"
@@ -62,27 +76,27 @@ Thank you!`;
               value={formData.name}
               onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
               required
-              className="h-10 transition-all duration-300 focus:scale-105 focus:shadow-lg border-primary/20"
-            />
-          </div>
-          
-          <div className="space-y-2">
-            <Label htmlFor="email" className="text-sm font-medium">Email</Label>
-            <Input
-              id="email"
-              type="email"
-              placeholder="your.email@gmail.com"
-              value={formData.email}
-              onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-              required
-              className="h-10 transition-all duration-300 focus:scale-105 focus:shadow-lg border-primary/20"
             />
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="gender" className="text-sm font-medium">Gender</Label>
+          {/* Email */}
+          <div className="space-y-1">
+            <Label htmlFor="email">Email</Label>
+            <Input
+              id="email"
+              type="email"
+              placeholder="your.email@example.com"
+              value={formData.email}
+              onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+              required
+            />
+          </div>
+
+          {/* Gender */}
+          <div className="space-y-1">
+            <Label htmlFor="gender">Gender</Label>
             <Select onValueChange={(value) => setFormData(prev => ({ ...prev, gender: value }))}>
-              <SelectTrigger className="h-10 transition-all duration-300 focus:scale-105 focus:shadow-lg border-primary/20">
+              <SelectTrigger id="gender">
                 <SelectValue placeholder="Select gender" />
               </SelectTrigger>
               <SelectContent>
@@ -94,23 +108,24 @@ Thank you!`;
             </Select>
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="age" className="text-sm font-medium">Age</Label>
+          {/* Age */}
+          <div className="space-y-1">
+            <Label htmlFor="age">Age</Label>
             <Input
               id="age"
               type="number"
-              placeholder="Your age"
               min="13"
               max="100"
+              placeholder="Your age"
               value={formData.age}
               onChange={(e) => setFormData(prev => ({ ...prev, age: e.target.value }))}
               required
-              className="h-10 transition-all duration-300 focus:scale-105 focus:shadow-lg"
             />
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="country" className="text-sm font-medium">Country</Label>
+          {/* Country */}
+          <div className="space-y-1">
+            <Label htmlFor="country">Country</Label>
             <Input
               id="country"
               type="text"
@@ -118,12 +133,12 @@ Thank you!`;
               value={formData.country}
               onChange={(e) => setFormData(prev => ({ ...prev, country: e.target.value }))}
               required
-              className="h-10 transition-all duration-300 focus:scale-105 focus:shadow-lg"
             />
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="city" className="text-sm font-medium">City</Label>
+          {/* City */}
+          <div className="space-y-1">
+            <Label htmlFor="city">City</Label>
             <Input
               id="city"
               type="text"
@@ -131,22 +146,22 @@ Thank you!`;
               value={formData.city}
               onChange={(e) => setFormData(prev => ({ ...prev, city: e.target.value }))}
               required
-              className="h-10 transition-all duration-300 focus:scale-105 focus:shadow-lg"
             />
           </div>
 
-          <Button 
-            type="submit" 
-            className="w-full h-12 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl animate-pulse-soft"
+          {/* Submit Button */}
+          <Button
+            type="submit"
+            className="w-full h-12 rounded-lg bg-gradient-to-r from-primary to-secondary text-white font-medium transition-all duration-300 hover:brightness-110 hover:scale-[1.02] shadow-md hover:shadow-lg"
             disabled={!formData.name || !formData.email || !formData.gender || !formData.age || !formData.country || !formData.city}
           >
-            <Mail className="w-5 h-5 mr-2 animate-bounce" />
+            <Mail className="w-5 h-5 mr-2" />
             Subscribe
           </Button>
         </form>
-        
-        <p className="text-xs text-muted-foreground text-center mt-3">
-          No spam, unsubscribe anytime. Your email stays private.
+
+        <p className="text-xs text-muted-foreground text-center mt-4">
+          No spam. Unsubscribe anytime. Your data stays private.
         </p>
       </CardContent>
     </Card>

@@ -1,5 +1,13 @@
 import { useState, useEffect } from "react";
-import { MessageCircle, X, Send, User, Bot, ChevronDown } from "lucide-react";
+import {
+  MessageCircle,
+  X,
+  Send,
+  User,
+  Bot,
+  ChevronDown,
+  Trash2,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -22,27 +30,33 @@ export const Chatbot = ({ isVisible }: ChatbotProps) => {
   const [inputValue, setInputValue] = useState("");
   const [showQuestions, setShowQuestions] = useState(true);
 
+  // ✅ Improved Questions with emojis/icons
   const defaultQuestions = [
     {
-      question: "What is Inphrone?",
-      answer: "Inphrone is a revolutionary platform that bridges the gap between entertainment creators and their audiences through people-powered intelligence. We help creators make data-driven decisions while empowering audiences to shape the entertainment they love."
+      question: "🤔 What is Inphrone?",
+      answer:
+        "🎬 Inphrone is a people-powered intelligence platform. \n👥 It helps creators and studios get **real audience insights before content is made**. \n🚀 No more guessing — only content that truly resonates!",
     },
     {
-      question: "How does it work?",
-      answer: "Inphrone creates a direct feedback loop: audiences share their preferences and opinions, our platform analyzes this data to provide insights, creators use these insights to make better content, and everyone benefits from more relevant entertainment."
+      question: "⚡ How does it work?",
+      answer:
+        "It’s simple:\n1️⃣ Audiences share their opinions 💬\n2️⃣ Inphrone analyzes preferences 📊\n3️⃣ Creators use insights 🎨\n4️⃣ Great content gets made 🏆\n\n🔁 We call this the *Creative Feedback Loop*!",
     },
     {
-      question: "Who can use Inphrone?",
-      answer: "Inphrone is designed for content creators, entertainment studios, and audiences. Creators get valuable insights, studios make better investment decisions, and audiences help shape the content they want to see."
+      question: "🌍 Who can use Inphrone?",
+      answer:
+        "👩‍🎨 **Creators** → Test ideas before production.\n🏢 **Studios** → Reduce risks and discover demand.\n👥 **Audiences** → Shape the future of entertainment!",
     },
     {
-      question: "When will it launch?",
-      answer: "We're currently in Phase 1 development with AudiencePulse launching in Q1 2024. CineLaunch (funding ecosystem) follows in Q3 2024, and global expansion is planned for Q1 2025."
+      question: "📅 When will it launch?",
+      answer:
+        "🚧 Inphrone is currently **in development**.\n📝 We are collecting feedback from audiences, creators, and studios.\n🌱 Full launch will be based on your feedback!",
     },
     {
-      question: "How can I get involved?",
-      answer: "Join our waitlist by filling out the form on our website! You'll get early access opportunities, exclusive updates, and the chance to help shape our platform. Your input matters in building the future of entertainment."
-    }
+      question: "🙌 How can I get involved?",
+      answer:
+        "✅ Join our waitlist via the feedback form 📋\n🔔 Get early access & exclusive updates.\n💡 Your input helps shape the platform we’re building together!",
+    },
   ];
 
   const addMessage = (text: string, isBot: boolean) => {
@@ -50,9 +64,9 @@ export const Chatbot = ({ isVisible }: ChatbotProps) => {
       id: Date.now().toString(),
       text,
       isBot,
-      timestamp: new Date()
+      timestamp: new Date(),
     };
-    setMessages(prev => [...prev, newMessage]);
+    setMessages((prev) => [...prev, newMessage]);
   };
 
   const handleQuestionClick = (question: string, answer: string) => {
@@ -60,43 +74,65 @@ export const Chatbot = ({ isVisible }: ChatbotProps) => {
     setTimeout(() => {
       addMessage(answer, true);
     }, 500);
-    // Don't hide questions after clicking
   };
 
   const handleSendMessage = () => {
     if (!inputValue.trim()) return;
-    
+
     addMessage(inputValue, false);
+    const userInput = inputValue;
     setInputValue("");
-    
-    // Simple response logic
+
     setTimeout(() => {
-      const lowercaseInput = inputValue.toLowerCase();
-      let response = "Thanks for your question! For detailed information, please check our FAQ section or fill out our form to get personalized assistance from our team.";
-      
+      const lowercaseInput = userInput.toLowerCase();
+      let response =
+        "🙏 Thanks for your question! For details, check our FAQ or fill the feedback form to stay updated 📋✨.";
+
       if (lowercaseInput.includes("inphrone") || lowercaseInput.includes("what")) {
-        response = "Inphrone is a people-powered intelligence platform for entertainment. We connect creators with their audiences to build better content together. Want to learn more? Join our waitlist!";
-      } else if (lowercaseInput.includes("how") || lowercaseInput.includes("work")) {
-        response = "We create a feedback loop where audiences share preferences, creators get insights, and better content is made. It's that simple! Ready to be part of the revolution?";
-      } else if (lowercaseInput.includes("join") || lowercaseInput.includes("signup")) {
-        response = "Great! Fill out our form above to join the waitlist. You'll get early access and help shape the future of entertainment!";
+        response =
+          "🎬 Inphrone is **people-powered intelligence for entertainment**. We connect creators with real audience voices 👥 to make smarter, more original content 🚀.";
+      } else if (
+        lowercaseInput.includes("how") ||
+        lowercaseInput.includes("work")
+      ) {
+        response =
+          "🔄 Inphrone works as a *Creative Feedback Loop*: \n👥 Audiences share → 📊 Creators listen → 🎞️ Better content gets made → 🏆 Everyone wins!";
+      } else if (
+        lowercaseInput.includes("join") ||
+        lowercaseInput.includes("signup") ||
+        lowercaseInput.includes("waitlist")
+      ) {
+        response =
+          "🙌 Awesome! 🎉 You can join our **waitlist** by filling the feedback form 📋. That way, you’ll get **early access & exclusive updates** 🔔.";
       }
-      
+
       addMessage(response, true);
     }, 800);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       handleSendMessage();
     }
   };
 
+  // ✅ Add greeting message when chatbot first opens
   useEffect(() => {
     if (isOpen && messages.length === 0) {
-      addMessage("Hi! I'm here to help you learn about Inphrone. Click on any question below or ask me anything!", true);
+      addMessage(
+        "👋 Hi! I’m your Inphrone Assistant 🤖. Click on any quick question below or type your own message!",
+        true
+      );
     }
   }, [isOpen]);
+
+  // ✅ Clear Chat option
+  const handleClearChat = () => {
+    setMessages([]);
+    setTimeout(() => {
+      addMessage("🧹 Chat cleared! Start fresh by asking a question ⬇️", true);
+    }, 300);
+  };
 
   if (!isVisible) return null;
 
@@ -112,28 +148,43 @@ export const Chatbot = ({ isVisible }: ChatbotProps) => {
                   <Bot className="w-4 h-4 text-primary-foreground" />
                 </div>
                 <div>
-                  <CardTitle className="text-sm font-semibold text-foreground">Inphrone Assistant</CardTitle>
+                  <CardTitle className="text-sm font-semibold text-foreground">
+                    Inphrone Assistant
+                  </CardTitle>
                   <p className="text-xs text-emerald-500 font-medium">Online</p>
                 </div>
               </div>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setIsOpen(false)}
-                className="h-6 w-6 hover:bg-destructive/10 text-foreground"
-              >
-                <X className="h-4 w-4" />
-              </Button>
+              <div className="flex gap-1">
+                {/* ✅ Clear Chat Button */}
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={handleClearChat}
+                  className="h-6 w-6 hover:bg-destructive/10 text-foreground"
+                >
+                  <Trash2 className="h-4 w-4 text-destructive" />
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setIsOpen(false)}
+                  className="h-6 w-6 hover:bg-destructive/10 text-foreground"
+                >
+                  <X className="h-4 w-4" />
+                </Button>
+              </div>
             </div>
           </CardHeader>
-          
+
           <CardContent className="p-0 flex flex-col h-full">
             <ScrollArea className="flex-1 p-4">
               <div className="space-y-3">
                 {messages.map((message) => (
                   <div
                     key={message.id}
-                    className={`flex gap-2 ${message.isBot ? 'justify-start' : 'justify-end'}`}
+                    className={`flex gap-2 ${
+                      message.isBot ? "justify-start" : "justify-end"
+                    }`}
                   >
                     {message.isBot && (
                       <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
@@ -141,10 +192,10 @@ export const Chatbot = ({ isVisible }: ChatbotProps) => {
                       </div>
                     )}
                     <div
-                      className={`max-w-[70%] p-3 rounded-lg text-xs leading-relaxed ${
+                      className={`max-w-[70%] p-3 rounded-lg text-xs leading-relaxed whitespace-pre-line ${
                         message.isBot
-                          ? 'bg-muted/70 text-foreground border border-border/30'
-                          : 'bg-primary text-primary-foreground ml-auto shadow-sm'
+                          ? "bg-muted/70 text-foreground border border-border/30"
+                          : "bg-primary text-primary-foreground ml-auto shadow-sm"
                       }`}
                     >
                       {message.text}
@@ -156,18 +207,22 @@ export const Chatbot = ({ isVisible }: ChatbotProps) => {
                     )}
                   </div>
                 ))}
-                
+
                 {/* Default Questions */}
                 {showQuestions && (
                   <div className="space-y-2 mt-4">
-                    <p className="text-xs text-muted-foreground font-medium">Quick questions:</p>
+                    <p className="text-xs text-muted-foreground font-medium">
+                      Quick questions:
+                    </p>
                     {defaultQuestions.map((item, index) => (
                       <Button
                         key={index}
                         variant="outline"
                         size="sm"
                         className="w-full text-xs h-auto p-3 text-left justify-start hover:bg-primary/10 border-primary/30 text-foreground hover:text-primary transition-colors"
-                        onClick={() => handleQuestionClick(item.question, item.answer)}
+                        onClick={() =>
+                          handleQuestionClick(item.question, item.answer)
+                        }
                       >
                         {item.question}
                       </Button>
@@ -176,7 +231,7 @@ export const Chatbot = ({ isVisible }: ChatbotProps) => {
                 )}
               </div>
             </ScrollArea>
-            
+
             {/* Input Area */}
             <div className="p-3 border-t border-border/50 bg-card/50 backdrop-blur-sm">
               <div className="flex gap-2">
