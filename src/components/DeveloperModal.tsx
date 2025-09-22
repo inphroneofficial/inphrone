@@ -35,7 +35,7 @@ export function DeveloperModal({ open, onOpenChange }: DeveloperModalProps) {
     {
       icon: <Instagram className="h-4 w-4 text-pink-500" />,
       label: "Instagram",
-      url: "https://instagram.com/g_tahngella_k",
+      url: "https://instagram.com/g_thangella_k",
     },
     {
       icon: <Linkedin className="h-4 w-4 text-blue-600" />,
