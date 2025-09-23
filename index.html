@@ -1,12 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <!-- Manifest for PWA -->
+    <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json" />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#4f46e5" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <title>Inphrone 🎬 | Audience Insights for Smarter Entertainment 🚀</title>
 
@@ -23,14 +26,14 @@
     <link rel="canonical" href="https://www.inphrone.com" />
     <meta name="robots" content="index, follow" />
 
-    <!-- ✅ Open Graph (Social Media Preview) -->
+    <!-- ✅ Open Graph -->
     <meta property="og:title" content="Inphrone 🎬 | Audience Insights for Smarter Entertainment 🚀" />
     <meta
       property="og:description"
       content="AI predicts yesterday. Inphrone builds tomorrow. Real audience voices, real insights, smarter content creation."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://www.inphrone.com/inphrone-logo.png" />
+    <meta property="og:image" content="https://www.inphrone.com/og-image.png" />
     <meta property="og:url" content="https://www.inphrone.com" />
 
     <!-- ✅ Twitter Card -->
@@ -41,12 +44,16 @@
       name="twitter:description"
       content="AI predicts yesterday. Inphrone builds tomorrow. Join the entertainment revolution powered by real audiences."
     />
-    <meta name="twitter:image" content="https://www.inphrone.com/inphrone-logo.png" />
+    <meta name="twitter:image" content="https://www.inphrone.com/twitter-card.png" />
 
     <!-- ✅ Icons -->
     <link rel="icon" href="/inphrone-logo.png" type="image/png" />
     <link rel="apple-touch-icon" href="/inphrone-logo.png" />
     <link rel="preload" as="image" href="/inphrone-logo.png" />
+
+    <!-- ✅ Performance -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <!-- ✅ JSON-LD Schema -->
     <script type="application/ld+json">
@@ -62,17 +69,26 @@
         "https://www.youtube.com/@inphrone",
         "https://www.facebook.com/inphrone",
         "https://www.reddit.com/user/inphrone",
-        "https://www.linkedin.com/company/inphrone"
+        "https://www.linkedin.com/company/inphrone",
+        "https://t.me/inphroneofficial"
       ],
-      "description": "Inphrone is a people-powered entertainment insights platform. Audiences share opinions 🎤, creators listen 🎨, and better content gets made 🎬."
+      "description": "Inphrone is a people-powered entertainment insights platform. Audiences share opinions 🎤, creators listen 🎨, and better content gets made 🎬.",
+      "founder": {
+        "@type": "Person",
+        "name": "Gadidamalla Thangella",
+        "url": "https://www.inphrone.com"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "inphrone@gmail.com"
+      }
     }
     </script>
   </head>
 
   <body>
     <noscript>Inphrone requires JavaScript to run. Please enable it in your browser.</noscript>
-
-    <!-- React/Vite App Mount -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

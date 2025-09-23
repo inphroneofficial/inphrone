@@ -1,4 +1,14 @@
-import { Instagram, Twitter, Youtube, Mail, ExternalLink, MessageCircle, Facebook } from "lucide-react";
+import { 
+  Instagram, 
+  Twitter, 
+  Youtube, 
+  Send, // using paper-plane as Telegram icon
+  Mail, 
+  ExternalLink, 
+  MessageCircle, 
+  Facebook 
+} from "lucide-react";
+
 import { SubscriptionForm } from "./SubscriptionForm";
 import { ScrollAnimatedText } from "./ScrollAnimatedText";
 
@@ -45,6 +55,14 @@ const Social = () => {
       color: "from-blue-600 to-blue-700"
     },
     {
+      name: "Telegram",
+      icon: Send, // paper-plane style works for Telegram
+      url: "https://t.me/inphroneofficial",
+      handle: "@inphroneofficial",
+      description: "Exclusive community updates, polls, and early access",
+      color: "from-sky-400 to-sky-600"
+    },
+    {
       name: "Email",
       icon: Mail,
       url: "mailto:inphrone@gmail.com",
@@ -80,14 +98,14 @@ const Social = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="text-center">
-                <div className={`w-12 h-12 mx-auto mb-3 bg-gradient-to-r ${social.color} rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                <div
+                  className={`w-12 h-12 mx-auto mb-3 bg-gradient-to-r ${social.color} rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
+                >
                   <social.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-base font-semibold text-foreground mb-1">{social.name}</h3>
                 <p className="text-xs text-muted-foreground mb-2">{social.handle}</p>
-                <p className="text-xs text-muted-foreground/80">
-                  {social.description}
-                </p>
+                <p className="text-xs text-muted-foreground/80">{social.description}</p>
                 <div className="mt-3 flex items-center justify-center gap-1 text-xs text-primary group-hover:text-primary/80">
                   <span>Follow</span>
                   <ExternalLink className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
@@ -100,9 +118,7 @@ const Social = () => {
         {/* Community Stats */}
         <div className="bg-muted/30 rounded-2xl p-8 mb-8">
           <div className="text-center mb-6">
-            <h3 className="text-2xl font-bold text-foreground mb-2">
-              Growing Community
-            </h3>
+            <h3 className="text-2xl font-bold text-foreground mb-2">Growing Community</h3>
             <p className="text-base text-muted-foreground">
               Join creators and audiences who are already part of the movement
             </p>
@@ -113,11 +129,11 @@ const Social = () => {
               <div className="text-3xl font-bold text-primary mb-1">1000+</div>
               <div className="text-sm text-muted-foreground">Early Supporters</div>
             </div>
-            <div className="text-center animate-scale-in" style={{ animationDelay: '0.1s' }}>
+            <div className="text-center animate-scale-in" style={{ animationDelay: "0.1s" }}>
               <div className="text-3xl font-bold text-secondary mb-1">50+</div>
               <div className="text-sm text-muted-foreground">Creator Partners</div>
             </div>
-            <div className="text-center animate-scale-in" style={{ animationDelay: '0.2s' }}>
+            <div className="text-center animate-scale-in" style={{ animationDelay: "0.2s" }}>
               <div className="text-3xl font-bold text-accent mb-1">10+</div>
               <div className="text-sm text-muted-foreground">Studio Collaborations</div>
             </div>
