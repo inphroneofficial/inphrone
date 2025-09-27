@@ -41,7 +41,7 @@ const Social = () => {
     {
       name: "Reddit",
       icon: MessageCircle,
-      url: "https://www.reddit.com/user/inphrone/",
+      url: "https://www.reddit.com/user/inphroneofficial/",
       handle: "u/inphrone",
       description: "Community discussions and feedback",
       color: "from-orange-500 to-orange-600"
