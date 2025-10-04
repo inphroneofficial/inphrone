@@ -4,33 +4,48 @@
     <!-- 🌍 PWA Manifest -->
     <link rel="manifest" href="/manifest.json" />
 
+    <!-- 🧱 Core Setup -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ✅ Enhanced viewport for mobile -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="theme-color" content="#4f46e5" />
+
+    <!-- 📱 Progressive Web App Setup -->
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-touch-fullscreen" content="yes" />
 
     <!-- 🎯 Primary SEO -->
     <title>Inphrone | People-Powered Entertainment Insights 🚀</title>
     <meta
       name="description"
-      content="Inphrone ✨ People-Powered Intelligence for Entertainment. Real audience voices → real insights → smarter content creation. AI predicts yesterday, Inphrone builds tomorrow 🚀."
+      content="Inphrone — People-Powered Entertainment Insights. Real audience voices → real insights → smarter content creation. Not iPhone — Inphrone builds tomorrow 🚀."
     />
     <meta
       name="keywords"
-      content="Inphrone, audience insights, entertainment platform, content feedback, creators, studios, phronesis, audience-powered intelligence, AI alternative"
+      content="Inphrone, entertainment insights, audience feedback, content intelligence, creators, AI alternative, audience platform"
     />
     <meta name="author" content="Inphrone" />
     <link rel="canonical" href="https://www.inphrone.com" />
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
 
-    <!-- 📱 Open Graph (Facebook, LinkedIn, etc.) -->
+    <!-- 📱 Open Graph / Social Sharing -->
     <meta property="og:site_name" content="Inphrone" />
-    <meta property="og:title" content="Inphrone 🎬 | Audience Insights for Smarter Entertainment 🚀" />
+    <meta
+      property="og:title"
+      content="Inphrone 🎬 | Audience Insights for Smarter Entertainment 🚀"
+    />
     <meta
       property="og:description"
-      content="AI predicts yesterday. Inphrone builds tomorrow. Real audience voices, real insights, smarter content creation."
+      content="AI predicts yesterday — Inphrone builds tomorrow. Real audience voices, real insights, smarter content creation."
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://www.inphrone.com/og-image.png" />
@@ -39,10 +54,13 @@
     <!-- 🐦 Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@inphrone" />
-    <meta name="twitter:title" content="Inphrone 🎬 | Audience Insights for Smarter Entertainment 🚀" />
+    <meta
+      name="twitter:title"
+      content="Inphrone 🎬 | Audience Insights for Smarter Entertainment 🚀"
+    />
     <meta
       name="twitter:description"
-      content="AI predicts yesterday. Inphrone builds tomorrow. Join the entertainment revolution powered by real audiences."
+      content="Inphrone is the people-powered entertainment intelligence platform — built for creators, powered by audiences."
     />
     <meta name="twitter:image" content="https://www.inphrone.com/twitter-card.png" />
 
@@ -59,52 +77,69 @@
 
     <!-- 🧾 Structured Data (Organization + Website) -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Inphrone",
-      "url": "https://www.inphrone.com",
-      "logo": "https://www.inphrone.com/inphrone-logo.png",
-      "sameAs": [
-        "https://www.instagram.com/inphrone",
-        "https://x.com/inphrone",
-        "https://www.youtube.com/@inphrone",
-        "https://www.facebook.com/inphrone",
-        "https://www.reddit.com/user/inphroneofficial/",
-        "https://www.linkedin.com/company/inphrone",
-        "https://t.me/inphroneofficial"
-      ],
-      "description": "Inphrone is a people-powered entertainment insights platform. Audiences share opinions 🎤, creators listen 🎨, and better content gets made 🎬.",
-      "founder": {
-        "@type": "Person",
-        "name": "Gadidamalla Thangella",
-        "url": "https://www.inphrone.com"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "email": "inphrone@gmail.com"
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Inphrone",
+        "url": "https://www.inphrone.com",
+        "logo": "https://www.inphrone.com/inphrone-logo.png",
+        "sameAs": [
+          "https://www.instagram.com/inphrone",
+          "https://x.com/inphrone",
+          "https://www.youtube.com/@inphrone",
+          "https://www.facebook.com/inphrone",
+          "https://www.reddit.com/user/inphroneofficial/",
+          "https://www.linkedin.com/company/inphrone",
+          "https://t.me/inphroneofficial"
+        ],
+        "description": "Inphrone is a people-powered entertainment insights platform. Audiences share opinions 🎤, creators listen 🎨, and better content gets made 🎬.",
+        "founder": {
+          "@type": "Person",
+          "name": "Gadidamalla Thangella",
+          "url": "https://www.inphrone.com"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "inphrone@gmail.com"
+        }
       }
-    }
     </script>
 
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "url": "https://www.inphrone.com",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.inphrone.com/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Inphrone",
+        "url": "https://www.inphrone.com",
+        "alternateName": "Inphrone Entertainment Insights",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.inphrone.com/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
       }
-    }
     </script>
+
+    <!-- 💡 Accessibility & Mobile Hints -->
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+
+    <!-- 💡 Hint: prevent zoom bugs on Safari -->
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- 🧠 Search Engine Enhancement -->
+    <meta name="google" content="nositelinkssearchbox" />
   </head>
 
   <body>
     <noscript>Inphrone requires JavaScript to run. Please enable it in your browser.</noscript>
+
+    <!-- ✅ Root React Mount Point -->
     <div id="root"></div>
+
+    <!-- 🚀 Entry Script -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
