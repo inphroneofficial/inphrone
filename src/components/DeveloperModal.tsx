@@ -62,9 +62,10 @@ export function DeveloperModal({ open, onOpenChange }: DeveloperModalProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
-        className="w-[92%] max-w-md h-[85vh] overflow-y-auto rounded-xl border border-primary/20 
+        className="w-[92%] max-w-md max-h-[90vh] overflow-y-auto rounded-xl border border-primary/20 
         shadow-[0_0_25px_rgba(0,200,255,0.3)] backdrop-blur-lg 
-        bg-gradient-to-br from-background/95 via-card/95 to-background/95"
+        bg-gradient-to-br from-background/95 via-card/95 to-background/95 
+        sm:h-auto sm:max-h-[90vh] p-4"
       >
         <DialogHeader>
           <DialogTitle className="text-center text-lg font-bold text-primary">
@@ -77,7 +78,6 @@ export function DeveloperModal({ open, onOpenChange }: DeveloperModalProps) {
 
         {/* Scrollable Content */}
         <div className="flex flex-col items-center gap-4 pt-3 px-2">
-          {/* Avatar & Info */}
           <motion.div
             className="flex flex-col items-center text-center"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -138,8 +138,8 @@ export function DeveloperModal({ open, onOpenChange }: DeveloperModalProps) {
             <div>
               <h4 className="font-medium text-sm mb-1">🚀 My Vision for Inphrone</h4>
               <p className="text-muted-foreground">
-                In a world led by algorithms 🤖, I believe real voices matter more. My vision is to build an ecosystem where **audiences shape creativity**, and creators take bold steps knowing they are backed by real demand.  
-                Inphrone = a future where **art meets wisdom** ✨.
+                In a world led by algorithms 🤖, I believe real voices matter more. My vision is to build an ecosystem where <strong>audiences shape creativity</strong>, and creators take bold steps knowing they are backed by real demand.  
+                Inphrone = a future where <strong>art meets wisdom</strong> ✨.
               </p>
             </div>
           </div>
