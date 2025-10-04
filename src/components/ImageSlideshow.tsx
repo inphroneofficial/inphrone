@@ -13,7 +13,7 @@ const ImageSlideshow = () => {
     description: "People-Powered Intelligence for Entertainment",
   },
   {
-    image: "/inphrone banner.jpg",
+    image: "/INPHRONE BANNER.png",
     title: "Inphrone Platform Overview",
     description: "The complete ecosystem for creators and audiences",
   },
@@ -21,6 +21,26 @@ const ImageSlideshow = () => {
     image: "/inphrone 1.png",
     title: "Vision of Inphrone",
     description: "AI predicts yesterday. Inphrone builds tomorrow.",
+  },
+  {
+    image: "/slide 18.png",
+    title: "A New Beginning",
+    description: "A fresh perspective to inspire meaningful innovation.",
+  },
+  {
+    image: "/slide 17.png",
+    title: "A New Beginning",
+    description: "A fresh perspective to inspire meaningful innovation.",
+  },
+  {
+    image: "/slide 16.png",
+    title: "A New Beginning",
+    description: "A fresh perspective to inspire meaningful innovation.",
+  },
+  {
+    image: "/slide 15.png",
+    title: "A New Beginning",
+    description: "A fresh perspective to inspire meaningful innovation.",
   },
   {
     image: "/slide 14.png",
