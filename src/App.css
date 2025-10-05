@@ -1,4 +1,3 @@
-
 /* Root container */
 #root {
   max-width: 100%;
@@ -7,6 +6,30 @@
   text-align: center;
   box-sizing: border-box;
   overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* --- GLOBAL SAFEGUARDS --- */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* 🚫 No sideways scrolling */
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+section,
+div {
+  max-width: 100vw; /* Prevent any container from overflowing */
+  box-sizing: border-box;
+}
+
+/* Prevent Safari transform + blur overflows */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-x: none;
 }
 
 /* Logo */
@@ -52,6 +75,10 @@
   background-color: hsl(var(--card));
   color: hsl(var(--card-foreground));
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* Card hover effect */
@@ -70,13 +97,70 @@
   color: hsl(var(--primary));
 }
 
-/* Responsive adjustments */
+/* --- SLIDESHOW FIX --- */
+.slideshow-container {
+  width: 100%;
+  max-width: 95vw; /* Fits small devices perfectly */
+  margin: 0 auto;
+  overflow: hidden; /* Prevent slide overflow */
+  border-radius: 1.5rem;
+}
+
+/* Image inside slideshow */
+.slideshow-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
 @media (max-width: 768px) {
   .logo {
     height: 4.5em;
     padding: 1em;
   }
+
   .card {
     padding: 1.5em;
+  }
+
+  #root {
+    padding: 1rem;
+  }
+
+  section,
+  div {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* iPhone SE & ultra-small devices (≤375px) */
+@media (max-width: 400px) {
+  #root {
+    padding: 0.75rem;
+  }
+
+  .card {
+    padding: 1.25em;
+  }
+
+  .slideshow-container {
+    max-width: 90vw;
+  }
+
+  body {
+    font-size: 0.95rem;
+  }
+}
+
+/* --- SAFARI / iOS OVERFLOW FIX --- */
+@supports (-webkit-touch-callout: none) {
+  html,
+  body {
+    overflow-x: hidden !important;
+    position: relative;
   }
 }
