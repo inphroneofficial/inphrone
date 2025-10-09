@@ -85,7 +85,7 @@ export function DeveloperModal({ open, onOpenChange }: DeveloperModalProps) {
             transition={{ duration: 0.5 }}
           >
             <Avatar className="h-20 w-20 border-2 border-primary shadow-md mb-2">
-              <AvatarImage src="/GTK.png" alt="G. Thangella" />
+              <AvatarImage src="/GT.png" alt="G.Thangella" />
               <AvatarFallback>GT</AvatarFallback>
             </Avatar>
             <h3 className="text-base font-semibold">G. Thangella</h3>
