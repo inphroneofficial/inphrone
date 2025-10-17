@@ -2,20 +2,56 @@
   "name": "Inphrone",
   "short_name": "Inphrone",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#000000",
   "theme_color": "#4f46e5",
-  "description": "Inphrone | People-Powered Intelligence for Entertainment 🎬✨ Real audience voices → smarter content creation 🚀.",
+  "description": "Inphrone 🎬 | People-Powered Entertainment Insights. Real audience voices → smarter content creation 🚀.",
   "icons": [
     {
-      "src": "/inphrone-logo.png",
-      "sizes": "192x192",
+      "src": "/web-icon-72.png",
+      "sizes": "72x72",
       "type": "image/png"
     },
     {
-      "src": "/inphrone-logo.png",
-      "sizes": "512x512",
+      "src": "/web-icon-96.png",
+      "sizes": "96x96",
       "type": "image/png"
+    },
+    {
+      "src": "/web-icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/web-icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/web-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/web-icon-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/web-icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/web-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
-  ]
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
 }
