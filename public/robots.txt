@@ -1,6 +1,7 @@
 # ────────────────────────────────
 # 🤖 Robots.txt for Inphrone
 # ────────────────────────────────
+
 # Allow Google Search
 User-agent: Googlebot
 Allow: /
@@ -9,7 +10,7 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-# Allow AI Crawlers (ChatGPT, Perplexity, Anthropic)
+# Allow AI Crawlers (ChatGPT, Perplexity, Claude, Gemini)
 User-agent: ChatGPT-User
 Allow: /
 User-agent: GPTBot
@@ -33,6 +34,6 @@ Allow: /
 Sitemap: https://www.inphrone.com/sitemap.xml
 
 # 📘 Notes:
-# - This file tells search and AI crawlers what content they can index.
-# - Do NOT block key pages (like /about or /survey).
-# - Keep sitemap reference at the end.
+# - All key pages are crawlable.
+# - Prevent accidental blocking of AI crawlers.
+# - Keep sitemap reference at the end for automatic indexing.

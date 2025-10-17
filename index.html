@@ -84,7 +84,9 @@
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
 
-    <!-- 🧾 Structured Data (Organization) -->
+    <!-- 🧾 Structured Data -->
+
+    <!-- Organization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -115,7 +117,7 @@
     }
     </script>
 
-    <!-- 🧾 Structured Data (Website + Search) -->
+    <!-- Website -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -131,7 +133,7 @@
     }
     </script>
 
-    <!-- 🧩 Brand Structured Data -->
+    <!-- Brand -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -146,39 +148,61 @@
     }
     </script>
 
-    <!-- 🧠 FAQ Schema -->
+    <!-- Person (Founder) -->
     <script type="application/ld+json">
     {
-     "@context": "https://schema.org",
-     "@type": "FAQPage",
-     "mainEntity": [
-      {
-       "@type": "Question",
-       "name": "What is Inphrone?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Inphrone is a people-powered entertainment insights platform where audiences share opinions and creators use real insights to shape better content."
-       }
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Gadidamalla Thangella",
+      "alternateName": "G. Thangella",
+      "jobTitle": "Founder & CEO",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Inphrone"
       },
-      {
-       "@type": "Question",
-       "name": "How is Inphrone different from AI?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "AI predicts yesterday using past data. Inphrone builds tomorrow by capturing what real audiences want before creation."
-       }
-      },
-      {
-       "@type": "Question",
-       "name": "Who can use Inphrone?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Audiences, creators, studios, OTT platforms, and entertainment professionals can use Inphrone to exchange insights and shape meaningful entertainment."
-       }
-      }
-     ]
+      "url": "https://www.inphrone.com/about",
+      "sameAs": [
+        "https://www.linkedin.com/in/your-linkedin",
+        "https://twitter.com/yourhandle",
+        "https://instagram.com/inphrone"
+      ]
     }
     </script>
+
+    <!-- FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Inphrone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Inphrone is a people-powered entertainment insights platform where audiences share opinions and creators use real insights to shape better content."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Inphrone different from AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI predicts yesterday using past data. Inphrone builds tomorrow by capturing what real audiences want before creation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who can use Inphrone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Audiences, creators, studios, OTT platforms, and entertainment professionals can use Inphrone to exchange insights and shape meaningful entertainment."
+          }
+        }
+      ]
+    }
+    </script>
+
   </head>
 
   <body>
