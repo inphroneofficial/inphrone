@@ -1,39 +1,103 @@
 # ────────────────────────────────
 # 🤖 Robots.txt for Inphrone
 # ────────────────────────────────
+# Purpose:
+# This file controls access to the Inphrone website by crawlers, bots, and AI platforms.
+# All important pages are crawlable to improve SEO and AI discoverability.
+# Sitemap references are included to help indexing.
 
-# Allow Google Search
+# ───────────────
+# 1️⃣ Search Engines
+# ───────────────
+# Google
 User-agent: Googlebot
 Allow: /
 
-# Allow Bing Search
+# Bing
 User-agent: Bingbot
 Allow: /
 
-# Allow AI Crawlers (ChatGPT, Perplexity, Claude, Gemini)
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Yandex
+User-agent: Yandex
+Allow: /
+
+# Other common search engines
+User-agent: Slurp
+Allow: /
+
+# ───────────────
+# 2️⃣ AI & Chatbots
+# ───────────────
+# ChatGPT
 User-agent: ChatGPT-User
 Allow: /
+
+# OpenAI GPTBot
 User-agent: GPTBot
 Allow: /
+
+# Perplexity
 User-agent: PerplexityBot
 Allow: /
+
+# Claude
 User-agent: ClaudeBot
 Allow: /
 
-# Allow Social Media Previews
-User-agent: Twitterbot
-Allow: /
-User-agent: facebookexternalhit
+# Gemini
+User-agent: GeminiBot
 Allow: /
 
-# Default rule for all other crawlers
+# Other AI platforms (future-proof)
 User-agent: *
 Allow: /
 
-# 🗺️ Sitemap Reference
+# ───────────────
+# 3️⃣ Social Media Previews
+# ───────────────
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# ───────────────
+# 4️⃣ Sensitive/Private Paths
+# ───────────────
+# Example: Admin pages, scripts, temporary files
+Disallow: /admin/
+Disallow: /private/
+Disallow: /scripts/
+Disallow: /temp/
+
+# ───────────────
+# 5️⃣ Crawl-delay (optional)
+# ───────────────
+# Delay heavy crawlers to reduce server load
+# Crawl-delay is in seconds
+User-agent: *
+Crawl-delay: 2
+
+# ───────────────
+# 6️⃣ Sitemap References
+# ───────────────
+# Primary sitemap
 Sitemap: https://www.inphrone.com/sitemap.xml
 
-# 📘 Notes:
-# - All key pages are crawlable.
-# - Prevent accidental blocking of AI crawlers.
-# - Keep sitemap reference at the end for automatic indexing.
+# Optional sitemap index (if multiple sitemaps exist in future)
+# Sitemap: https://www.inphrone.com/sitemap-index.xml
+
+# ───────────────
+# 7️⃣ Notes
+# ───────────────
+# - Keep AI crawlers explicitly allowed to improve discoverability.
+# - Update sitemap URLs when adding new sections.
+# - Maintain this file for new AI bots in the future.
+# - Ensure Disallow rules never block important public content.
