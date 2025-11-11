@@ -89,29 +89,32 @@ const Hero = () => {
               : "translate-y-10 opacity-0"
           } w-full max-w-[100vw]`}
         >
-          {/* Hero Title */}
-          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tight leading-none text-center break-words">
-            <TypingText
-              text="INPHRONE"
-              className="text-gradient animate-gradient"
-              speed={150}
-              delay={500}
-            />
-          </h1>
+        {/* Hero Title */}
+<h1
+  className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tight leading-none text-center break-words inphrone-title inphrone-title-glow"
+>
+  <TypingText
+    text="INPHRONE"
+    className="hero-title-3d"
+    speed={150}
+    delay={500}
+  />
+</h1>
 
-          {/* Subtitle */}
-          <div className="mx-auto mb-8 px-3 sm:px-0 max-w-[100vw]">
-            <p className="text-lg sm:text-xl md:text-2xl font-medium text-foreground mb-3 break-words">
-              <TypingText
-                text="People-Powered Intelligence for Entertainment"
-                speed={80}
-                delay={2500}
-                showCursor={false}
-              />
-            </p>
-            <p className="text-base sm:text-lg text-muted-foreground mb-6 break-words">
-              "AI predicts yesterday. Inphrone builds tomorrow."
-            </p>
+{/* Subtitle */}
+<div className="mx-auto mb-8 px-4 sm:px-0 max-w-[100vw] text-center">
+  <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground mb-3 break-words">
+    <TypingText
+      text="People-Powered Intelligence for Entertainment"
+      speed={80}
+      delay={2500}
+      showCursor={false}
+    />
+  </p>
+
+<p className="text-base sm:text-lg md:text-xl font-semibold text-foreground text-center mb-6 break-words">
+  "AI predicts yesterday. Inphrone builds tomorrow."
+</p>
 
             {/* Info Box */}
             <div className="bg-primary/10 border border-primary/20 rounded-2xl p-6 backdrop-blur-sm mb-6 mx-auto w-full max-w-[95vw] sm:max-w-xl">
