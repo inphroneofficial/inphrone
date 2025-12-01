@@ -6,17 +6,17 @@ const Roadmap = () => {
   const phases = [
     {
       phase: "Phase 1",
-      title: "Feedback & Prototype 📊",
-      subtitle: "Building with real voices",
-      timeline: "Q3 2024 – Ongoing",
+      title: "Beta Launch 🎬",
+      subtitle: "Real audiences, real feedback",
+      timeline: "Dec 2025 – Ongoing",
       status: "In Progress",
       description:
-        "We are collecting feedback from audiences 👥, creators 🎨, and studios 🎬 to shape the foundation of Inphrone. Every opinion matters in building a smarter, people-powered platform.",
+        "The Inphrone beta is live! Audiences (17–50) are sharing daily insights, moods, and preferences 👥, while creators test features and explore validated ideas 🎨. This phase ensures the platform behaves as intended and builds trust through live interaction.",
       highlights: [
-        "🗣️ Audience surveys & real-time polls",
-        "🎨 Creator & studio feedback sessions",
-        "⚡ Interactive prototype testing",
-        "🔁 Iterating features based on community needs"
+        "🗣️ Audience daily feedback & InphroSync usage",
+        "🎨 Creator engagement & idea validation",
+        "⚡ Live platform behavior testing",
+        "🔁 Iterating features based on real user insights"
       ],
       icon: Users,
       color: "blue",
@@ -25,16 +25,16 @@ const Roadmap = () => {
     {
       phase: "Phase 2",
       title: "Full Platform Launch 🚀",
-      subtitle: "Smarter decisions, better content",
-      timeline: "2025",
+      subtitle: "Smarter content decisions",
+      timeline: "2026",
       status: "Planned",
       description:
-        "Launch the complete Inphrone platform where audiences share what excites them 💡, creators validate ideas before production 🎥, and studios save time & money 💰 by understanding demand early.",
+        "The complete Inphrone platform will launch with full features: audiences express preferences across all entertainment categories 💡, creators receive validated insights 🎥, and studios can reduce risk and invest confidently 💰.",
       highlights: [
-        "📊 Advanced analytics dashboard",
-        "🎭 Multi-format testing (films, OTT, ads, music)",
-        "🎁 Rewards & recognition for audiences",
-        "🎯 Data-driven insights without limiting creativity"
+        "📊 Advanced analytics & dashboards",
+        "🎭 Multi-format content testing (films, OTT, ads, music)",
+        "🎁 Rewards, streaks, and recognition for audiences",
+        "🎯 Data-driven insights while fostering creative freedom"
       ],
       icon: Rocket,
       color: "purple",
@@ -43,16 +43,16 @@ const Roadmap = () => {
     {
       phase: "Phase 3",
       title: "Global Expansion 🌍",
-      subtitle: "Scaling & new possibilities",
-      timeline: "Beyond 2025",
+      subtitle: "Scaling audience intelligence",
+      timeline: "Beyond 2026",
       status: "Vision",
       description:
-        "Inphrone will expand worldwide with multi-language support 🌐, regional insights 📍, and partnerships with studios. One glimpse into the future: CineLaunch 🎬💰 — where audiences could directly fund the creators they believe in.",
+        "Inphrone expands worldwide with multi-language support 🌐, regional insights 📍, and partnerships with creators and studios. Future features like CineLaunch allow audiences to fund the creators they trust 💡💰.",
       highlights: [
         "🌐 Multi-language & regional insights",
         "🤝 Global studio & platform partnerships",
         "🔮 AI-enhanced trend forecasting",
-        "💰 CineLaunch (future): audience-powered funding"
+        "💰 CineLaunch: audience-powered content funding"
       ],
       icon: Star,
       color: "green",
@@ -91,7 +91,7 @@ const Roadmap = () => {
           <p className="text-base text-muted-foreground max-w-2xl mx-auto">
             Inphrone is on a journey to transform entertainment 🎬 through{" "}
             <span className="font-semibold text-primary">people-powered intelligence</span>.  
-            Here’s how we’re moving from early feedback to a global movement 🌍.
+            From beta testing to global reach, here’s how we’re shaping the future of content creation 🌍.
           </p>
         </div>
 
@@ -167,11 +167,11 @@ const Roadmap = () => {
             <Globe2 className="w-6 h-6 text-accent" /> Our Vision ✨
           </h3>
           <p className="text-base text-muted-foreground mb-6 max-w-3xl mx-auto">
-            By 2025 and beyond, Inphrone will set the global standard for{" "}
-            <span className="font-semibold text-primary">audience-driven content validation</span>.  
+            By 2026 and beyond, Inphrone will set the global standard for{" "}
+            <span className="font-semibold text-primary">audience-driven content intelligence</span>.  
             Audiences 👥 will influence what gets made, creators 🎨 will take bold risks with confidence,  
-            and studios 🎬 will reduce failures while unlocking originality.  
-            CineLaunch glimpses the future: where audiences not only guide content, but may also fund the stories they believe in 💡💰.
+            and studios 🎬 will produce relevant, innovative content while minimizing failures.  
+            CineLaunch previews the future: audiences not only guide content but may also directly fund the creators and stories they believe in 💡💰.
           </p>
         </div>
       </div>
