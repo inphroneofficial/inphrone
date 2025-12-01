@@ -119,7 +119,7 @@ const Footer = () => {
         <div className="pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
             <span>© 2025 Inphrone. Built By</span>
-           <span>G Thangella For</span>
+           <span>G Thangella</span>
             <span>for creators and audiences.</span>
           </div>
           <div className="flex gap-4">
