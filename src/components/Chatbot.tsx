@@ -29,35 +29,35 @@ export const Chatbot = ({ isVisible }: ChatbotProps) => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState("");
   const [showQuestions, setShowQuestions] = useState(true);
+// ✅ Updated Questions with Answers
+const defaultQuestions = [
+  {
+    question: "🤔 What is Inphrone?",
+    answer:
+      "🎬 Inphrone is a **people-powered intelligence platform** connecting audiences and creators. \n👥 Audiences (17–50) share preferences, moods, and favorite genres across all entertainment categories. \n🎨 Creators and studios get validated, real-time insights to produce content that truly resonates — reducing failures and guesswork. \n🏆 Rewards, streaks, and InphroSync keep audiences engaged daily!",
+  },
+  {
+    question: "⚡ How does it work?",
+    answer:
+      "🔄 The Creative Feedback Loop:\n1️⃣ Audiences share their opinions, moods, and interests 💬\n2️⃣ Inphrone analyzes this data with AI 📊\n3️⃣ Creators receive **secure, anonymous insights** 🎨\n4️⃣ Content is made that audiences actually want to watch 🏆\n\n💡 Bonus: Features like **Your Turn** let users ask questions and get responses from the community, creating more engagement!",
+  },
+  {
+    question: "🌍 Who can use Inphrone?",
+    answer:
+      "👩‍🎨 **Creators** → Validate ideas before production, reduce risks, and create content audiences love.\n🏢 **Studios** → Understand demand early and make smarter investment decisions.\n👥 **Audiences** → Influence what gets made, interact anonymously, earn rewards, and discover content tailored to them.",
+  },
+  {
+    question: "📅 When will it launch?",
+    answer:
+      "🚀 **Beta is live in Dec 2025!** Audiences and creators are testing features and giving real feedback.\n🌱 **Full platform launch in 2026** with complete analytics, rewards, and multi-format testing.\n🌍 Global expansion and CineLaunch (audience-funded content) will follow beyond 2026.",
+  },
+  {
+    question: "🙌 How can I get involved?",
+    answer:
+      "✅ Join the **beta** to share your opinions, try InphroSync, and use Your Turn!\n🔔 Get early access, exclusive updates, and rewards.\n💡 Your input helps shape the platform and ensures entertainment evolves with the audience.",
+  },
+];
 
-  // ✅ Improved Questions with emojis/icons
-  const defaultQuestions = [
-    {
-      question: "🤔 What is Inphrone?",
-      answer:
-        "🎬 Inphrone is a people-powered intelligence platform. \n👥 It helps creators and studios get **real audience insights before content is made**. \n🚀 No more guessing — only content that truly resonates!",
-    },
-    {
-      question: "⚡ How does it work?",
-      answer:
-        "It’s simple:\n1️⃣ Audiences share their opinions 💬\n2️⃣ Inphrone analyzes preferences 📊\n3️⃣ Creators use insights 🎨\n4️⃣ Great content gets made 🏆\n\n🔁 We call this the *Creative Feedback Loop*!",
-    },
-    {
-      question: "🌍 Who can use Inphrone?",
-      answer:
-        "👩‍🎨 **Creators** → Test ideas before production.\n🏢 **Studios** → Reduce risks and discover demand.\n👥 **Audiences** → Shape the future of entertainment!",
-    },
-    {
-      question: "📅 When will it launch?",
-      answer:
-        "🚧 Inphrone is currently **in development**.\n📝 We are collecting feedback from audiences, creators, and studios.\n🌱 Full launch will be based on your feedback!",
-    },
-    {
-      question: "🙌 How can I get involved?",
-      answer:
-        "✅ Join our waitlist via the feedback form 📋\n🔔 Get early access & exclusive updates.\n💡 Your input helps shape the platform we’re building together!",
-    },
-  ];
 
   const addMessage = (text: string, isBot: boolean) => {
     const newMessage: Message = {
