@@ -89,214 +89,202 @@ const Hero = () => {
               : "translate-y-10 opacity-0"
           } w-full max-w-[100vw]`}
         >
-        {/* Hero Title */}
-<h1
-  className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tight leading-none text-center break-words inphrone-title inphrone-title-glow"
->
-  <TypingText
-    text="INPHRONE"
-    className="hero-title-3d"
-    speed={150}
-    delay={500}
-  />
-</h1>
+          {/* Hero Title */}
+          <h1
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tight leading-none text-center break-words inphrone-title inphrone-title-glow"
+          >
+            <TypingText
+              text="INPHRONE"
+              className="hero-title-3d"
+              speed={150}
+              delay={500}
+            />
+          </h1>
 
-{/* Subtitle */}
-<div className="mx-auto mb-8 px-4 sm:px-0 max-w-[100vw] text-center">
-  <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground mb-3 break-words">
-    <TypingText
-      text="People-Powered Intelligence for Entertainment"
-      speed={80}
-      delay={2500}
-      showCursor={false}
-    />
-  </p>
-
-<p className="text-base sm:text-lg md:text-xl font-semibold text-foreground text-center mb-6 break-words">
-  "AI predicts yesterday. Inphrone builds tomorrow."
-</p>
+          {/* Subtitle */}
+          <div className="mx-auto mb-8 px-4 sm:px-0 max-w-[100vw] text-center">
+            <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground mb-3 break-words">
+              <TypingText
+                text="People-Powered Intelligence for Entertainment"
+                speed={80}
+                delay={2500}
+                showCursor={false}
+              />
+            </p>
+            <p className="text-base sm:text-lg md:text-xl font-semibold text-foreground text-center mb-6 break-words">
+              "Demand Creates Supply. Inphrone shows creators what audiences truly want."
+            </p>
 
             {/* Info Box */}
-            <div className="bg-primary/10 border border-primary/20 rounded-2xl p-6 backdrop-blur-sm mb-6 mx-auto w-full max-w-[95vw] sm:max-w-xl">
+            <div className="bg-primary/10 border border-primary/20 rounded-2xl p-6 mb-6 mx-auto w-full max-w-[95vw] sm:max-w-xl">
               <p className="text-base sm:text-lg text-foreground font-medium break-words">
-                🎯 <strong>What is Inphrone?</strong> A revolutionary platform
-                that bridges the gap between entertainment creators and their
-                audiences through people-powered intelligence.
-              </p>
-            </div>
+                🎯 <strong>What is Inphrone?</strong>  
+A revolutionary platform bridging audiences and creators through real-time, people-powered insights. Audiences (17–50) share their preferences, interests, favorite genres, and the types of content they enjoy or are waiting to watch across all entertainment categories. Creators receive validated audience data to produce relevant, engaging content while reducing the risk of failure.
 
-            {/* Features Grid */}
-            <div className="w-full overflow-x-hidden">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-[95vw] sm:max-w-4xl mx-auto mb-8">
-                <div className="bg-secondary/10 border border-secondary/20 rounded-xl p-4 w-full">
-                  <h4 className="font-semibold text-foreground mb-2">
-                    🎬 For Creators
-                  </h4>
-                  <p className="text-sm text-muted-foreground break-words">
-                    Get real-time feedback and data-driven insights to create
-                    content that truly resonates
-                  </p>
-                </div>
-                <div className="bg-accent/10 border border-accent/20 rounded-xl p-4 w-full">
-                  <h4 className="font-semibold text-foreground mb-2">
-                    👥 For Audiences
-                  </h4>
-                  <p className="text-sm text-muted-foreground break-words">
-                    Share your preferences and help shape the entertainment you
-                    love
-                  </p>
-                </div>
-                <div className="bg-primary/10 border border-primary/20 rounded-xl p-4 w-full">
-                  <h4 className="font-semibold text-foreground mb-2">
-                    🏆 For Everyone
-                  </h4>
-                  <p className="text-sm text-muted-foreground break-words">
-                    Better entertainment that connects creators and audiences
-                    like never before
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Why Inphrone */}
-            <div className="bg-gradient-to-r from-primary/5 to-secondary/5 border border-primary/10 rounded-2xl p-6 mb-6 break-words mx-auto w-full max-w-[95vw] sm:max-w-4xl">
-              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">
-                🚀 Why Inphrone Matters
-              </h3>
-              <p className="text-base sm:text-lg text-muted-foreground mb-4">
-                The entertainment industry faces a critical disconnect: creators
-                often produce content based on assumptions, while audiences
-                struggle to influence what gets made. Inphrone solves this by
-                creating a direct feedback loop.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm break-words">
-                <div>
-                  <strong className="text-foreground">Real-World Impact:</strong>
-                  <ul className="text-muted-foreground mt-1 space-y-1">
-                    <li>• Reduce content production waste by 40%</li>
-                    <li>• Increase audience satisfaction by 60%</li>
-                    <li>• Create more inclusive entertainment</li>
-                  </ul>
-                </div>
-                <div>
-                  <strong className="text-foreground">Long-term Vision:</strong>
-                  <ul className="text-muted-foreground mt-1 space-y-1">
-                    <li>• Democratic content creation</li>
-                    <li>• AI-powered audience insights</li>
-                    <li>• Global entertainment ecosystem</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Call to Action */}
-            <div className="text-center w-full max-w-[95vw] mx-auto">
-              <p className="text-lg sm:text-xl font-bold text-primary mb-2">
-                Be Part of Building the Future!
-              </p>
-              <p className="text-base sm:text-lg text-muted-foreground break-words">
-                Fill out this quick form to join our waitlist, share your ideas,
-                and help shape our platform. Your input matters.
               </p>
             </div>
           </div>
-        </div>
 
-        {/* Primary Action Button */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 w-full max-w-[95vw]">
-          <Button
-            variant="premium"
-            size="lg"
-            className="group text-lg px-10 py-4 shadow-premium hover-glow"
-            onClick={() =>
-              window.open(
-                "https://docs.google.com/forms/d/e/1FAIpQLSdh9vlflrEmmfP4zUFFFJmh-8jDtRtQ1stUQENmLIobYGxwAg/viewform?usp=header",
-                "_blank"
-              )
-            }
-          >
-            <Sparkles className="w-5 h-5" />
-            Join the Revolution
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </Button>
-          <p className="text-sm text-muted-foreground">
-            ✨ <strong>2 minutes</strong> to help shape entertainment's future
-          </p>
-        </div>
+          {/* Features Grid */}
+          <div className="w-full overflow-x-hidden">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-[95vw] sm:max-w-4xl mx-auto mb-8">
+              <div className="bg-secondary/10 border border-secondary/20 rounded-xl p-4 w-full">
+                <h4 className="font-semibold text-foreground mb-2">👥 For Audiences</h4>
+                <p className="text-sm text-muted-foreground break-words">
+                  Share weekly opinions, moods, and preferences anonymously. Track InphroSync stats, your influence streaks, daily Fastest Finger First participation, and see live counts of moods, devices, and apps used by other audiences.
+                </p>
+              </div>
+              <div className="bg-accent/10 border border-accent/20 rounded-xl p-4 w-full">
+                <h4 className="font-semibold text-foreground mb-2">🎬 For Creators & Studios</h4>
+                <p className="text-sm text-muted-foreground break-words">
+                  Access real-time audience intelligence. Understand genre demand, mood trends, app/device preferences, and audience distribution. Validate ideas before production, reduce risk, and explore new genres confidently.
+                </p>
+              </div>
+              <div className="bg-primary/10 border border-primary/20 rounded-xl p-4 w-full">
+                <h4 className="font-semibold text-foreground mb-2">🏆 Engagement & Rewards</h4>
+                <p className="text-sm text-muted-foreground break-words">
+                  Participate in Fastest Finger First, submit weekly opinions, earn streaks, points, coupons, and badges. Curiosity and interactivity make Inphrone a daily habit.
+                </p>
+              </div>
+            </div>
+          </div>
 
-        {/* Image Slideshow Section */}
-        <div className="mb-16 w-full overflow-x-hidden">
-          <div className="text-center mb-8 px-3 sm:px-0">
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
-              🔁 The Creative Feedback Loop
-            </h2>
-            <p className="text-base sm:text-lg text-muted-foreground max-w-[95vw] sm:max-w-3xl mx-auto break-words">
-              Experience how Inphrone bridges the gap between audiences and
-              creators
+          {/* Why Inphrone */}
+          <div className="bg-gradient-to-r from-primary/5 to-secondary/5 border border-primary/10 rounded-2xl p-6 mb-6 break-words mx-auto w-full max-w-[95vw] sm:max-w-4xl">
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">🚀 Why Inphrone Matters</h3>
+            <p className="text-base sm:text-lg text-muted-foreground mb-4">
+              Today, repetitive, low-value content dominates because creators chase likes, shares, and engagement rather than real audience interest. Inphrone flips the model: demand creates supply, not the other way around. Creators can finally know what audiences truly want.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm break-words">
+              <div>
+                <strong className="text-foreground">Audience Impact:</strong>
+                <ul className="text-muted-foreground mt-1 space-y-1">
+                  <li>• Influence entertainment anonymously</li>
+                  <li>• Daily InphroSync engagement & streaks</li>
+                  <li>• Live stats by age, gender, location</li>
+                </ul>
+              </div>
+              <div>
+                <strong className="text-foreground">Creator Benefits:</strong>
+                <ul className="text-muted-foreground mt-1 space-y-1">
+                  <li>• Validate ideas before creating content</li>
+                  <li>• Reduce production risk and waste</li>
+                  <li>• Explore new genres and trends with real demand data</li>
+                  <li>• AI platforms can leverage data for content generation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center w-full max-w-[95vw] mx-auto mb-12">
+            <p className="text-lg sm:text-xl font-bold text-primary mb-2">
+              Be Part of Shaping Entertainment!
+            </p>
+            <p className="text-base sm:text-lg text-muted-foreground break-words">
+              Join our waitlist, share insights, and see the live vision of Inphrone in action. Actual vision builds trust; theory alone isn’t enough.
             </p>
           </div>
-          <div className="w-full max-w-[95vw] sm:max-w-5xl mx-auto overflow-hidden rounded-2xl">
-            <ImageSlideshow />
-          </div>
-        </div>
 
-        {/* Feature Highlights */}
-        <div className="w-full overflow-x-hidden">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12 w-full max-w-[95vw] sm:max-w-6xl mx-auto px-3 sm:px-0">
-            <div className="glass-card p-6 text-center hover-scale w-full">
-              <div className="w-12 h-12 bg-primary-gradient rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-xl">👂</span>
-              </div>
-              <h3 className="font-semibold text-foreground mb-2">
-                Audiences Share
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Real opinions, real time
+          {/* Primary Action Button */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 w-full max-w-[95vw]">
+            <Button
+              variant="premium"
+              size="lg"
+              className="group text-lg px-10 py-4 shadow-premium hover-glow"
+              onClick={() =>
+                window.open(
+                  "https://docs.google.com/forms/d/e/1FAIpQLSdh9vlflrEmmfP4zUFFFJmh-8jDtRtQ1stUQENmLIobYGxwAg/viewform?usp=header",
+                  "_blank"
+                )
+              }
+            >
+              <Sparkles className="w-5 h-5" />
+              Join the Revolution
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+            <p className="text-sm text-muted-foreground">
+              ✨ <strong>2 minutes</strong> to help shape entertainment's future
+            </p>
+          </div>
+
+          {/* Image Slideshow Section */}
+          <div className="mb-16 w-full overflow-x-hidden">
+            <div className="text-center mb-8 px-3 sm:px-0">
+              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
+                🔁 The Creative Feedback Loop
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground max-w-[95vw] sm:max-w-3xl mx-auto break-words">
+                Experience how Inphrone bridges the gap between audiences and creators, and see live how your input matters.
               </p>
             </div>
-            <div className="glass-card p-6 text-center hover-scale w-full">
-              <div className="w-12 h-12 bg-secondary-gradient rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-xl">🎨</span>
-              </div>
-              <h3 className="font-semibold text-foreground mb-2">
-                Creators Listen
-              </h3>
-              <p className="text-sm text-muted-foreground">Data-driven insights</p>
-            </div>
-            <div className="glass-card p-6 text-center hover-scale w-full">
-              <div className="w-12 h-12 bg-accent-gradient rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-xl">🎞️</span>
-              </div>
-              <h3 className="font-semibold text-foreground mb-2">
-                Content Created
-              </h3>
-              <p className="text-sm text-muted-foreground">What people want</p>
-            </div>
-            <div className="glass-card p-6 text-center hover-scale w-full">
-              <div className="w-12 h-12 bg-primary-glow-gradient rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-xl">🏆</span>
-              </div>
-              <h3 className="font-semibold text-foreground mb-2">
-                Everyone Wins
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Better entertainment
-              </p>
+            <div className="w-full max-w-[95vw] sm:max-w-5xl mx-auto overflow-hidden rounded-2xl">
+              <ImageSlideshow />
             </div>
           </div>
-        </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-subtle">
-          <div className="w-6 h-10 border-2 border-foreground/30 rounded-full flex justify-center backdrop-blur-sm">
-            <div className="w-1 h-3 bg-foreground/50 rounded-full mt-2 animate-pulse" />
+          {/* Feature Highlights */}
+          <div className="w-full overflow-x-hidden">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12 w-full max-w-[95vw] sm:max-w-6xl mx-auto px-3 sm:px-0">
+              <div className="glass-card p-6 text-center hover-scale w-full">
+                <div className="w-12 h-12 bg-primary-gradient rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white text-xl">👂</span>
+                </div>
+                <h3 className="font-semibold text-foreground mb-2">
+                  Audiences Share
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Real opinions, moods, and preferences in daily InphroSync.
+                </p>
+              </div>
+              <div className="glass-card p-6 text-center hover-scale w-full">
+                <div className="w-12 h-12 bg-secondary-gradient rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white text-xl">🎨</span>
+                </div>
+                <h3 className="font-semibold text-foreground mb-2">
+                  Creators Listen
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Data-driven insights to reduce risk and create relevant content.
+                </p>
+              </div>
+              <div className="glass-card p-6 text-center hover-scale w-full">
+                <div className="w-12 h-12 bg-accent-gradient rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white text-xl">🎞️</span>
+                </div>
+                <h3 className="font-semibold text-foreground mb-2">
+                  Content Created
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Based on real audience demand, not assumptions.
+                </p>
+              </div>
+              <div className="glass-card p-6 text-center hover-scale w-full">
+                <div className="w-12 h-12 bg-primary-glow-gradient rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white text-xl">🏆</span>
+                </div>
+                <h3 className="font-semibold text-foreground mb-2">
+                  Everyone Wins
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Audiences influence content, creators succeed, engagement thrives.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <DeveloperModal
-          open={isDeveloperModalOpen}
-          onOpenChange={setIsDeveloperModalOpen}
-        />
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-subtle">
+            <div className="w-6 h-10 border-2 border-foreground/30 rounded-full flex justify-center backdrop-blur-sm">
+              <div className="w-1 h-3 bg-foreground/50 rounded-full mt-2 animate-pulse" />
+            </div>
+          </div>
+
+          <DeveloperModal
+            open={isDeveloperModalOpen}
+            onOpenChange={setIsDeveloperModalOpen}
+          />
+        </div>
       </div>
     </section>
   );
